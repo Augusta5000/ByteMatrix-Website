@@ -4,11 +4,17 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>ByteMatrix | Learn & Grow</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
   <link rel="stylesheet" href="styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet"/>
 </head>
 <body>
-  <header class="hero">
+
+  <header class="hero" data-aos="fade-down">
     <div class="container">
       <h1>Create your digital success story</h1>
       <p>Transform your business with professional web development, stunning video content, and strategic digital marketing that drives real results.</p>
@@ -16,30 +22,34 @@
     </div>
   </header>
 
-  <section class="about" id="about">
+  <section class="about" id="about" data-aos="fade-up">
     <div class="container">
       <h2>About ByteMatrix</h2>
-      <p>Empowering creators and businesses with smart digital solutions that scale.</p>
+      <p style="text-align: center;">Empowering creators and businesses with smart digital solutions that scale.</p>
     </div>
   </section>
 
-  <section class="services" id="services">
+  <section class="services" id="services" data-aos="fade-up">
     <div class="container">
       <h2>Our Services</h2>
       <div class="service-cards">
         <div class="card">
+          <i class="fas fa-code"></i>
           <h3>Web Development</h3>
           <p>Responsive websites tailored for performance and conversion.</p>
         </div>
         <div class="card">
+          <i class="fas fa-video"></i>
           <h3>Video Editing</h3>
           <p>Engaging edits for YouTube, reels, and promos.</p>
         </div>
         <div class="card">
+          <i class="fas fa-image"></i>
           <h3>Thumbnail Design</h3>
           <p>Scroll-stopping designs that get clicks.</p>
         </div>
         <div class="card">
+          <i class="fas fa-bullhorn"></i>
           <h3>Digital Marketing</h3>
           <p>SEO, ads, and strategy to grow your brand online.</p>
         </div>
@@ -47,7 +57,7 @@
     </div>
   </section>
 
-  <section class="testimonials" id="testimonials">
+  <section class="testimonials" id="testimonials" data-aos="zoom-in">
     <div class="container">
       <h2>What Clients Say</h2>
       <div class="testimonial">
@@ -61,10 +71,10 @@
     </div>
   </section>
 
-  <section class="contact" id="contact">
+  <section class="contact" id="contact" data-aos="fade-up">
     <div class="container">
       <h2>Contact Us</h2>
-      <form id="contactForm">
+      <form>
         <input type="text" placeholder="Name" required />
         <input type="email" placeholder="Email" required />
         <textarea placeholder="Message" rows="5" required></textarea>
@@ -79,6 +89,8 @@
     </div>
   </footer>
 
+  <!-- JS Libraries -->
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
   <script src="script.js"></script>
 </body>
 </html>
