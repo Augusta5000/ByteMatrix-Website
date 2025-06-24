@@ -2,95 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ByteMatrix | Learn & Grow</title>
-
-  <!-- Fonts & Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
-
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header data-aos="fade-down">
+    <h1>Transform Your Ideas Into Reality</h1>
+    <p>ByteMatrix crafts powerful digital solutions — from sleek websites to engaging content and smart strategies.</p>
 
-  <header class="hero" data-aos="fade-down">
-    <div class="container">
-      <h1>Create your digital success story</h1>
-      <p>Transform your business with professional web development, stunning video content, and strategic digital marketing that drives real results.</p>
-      <a href="#contact" class="cta-button">Let’s Work Together</a>
+    <div class="hero-media">
+      <video autoplay muted loop playsinline>
+        <source src="media/office.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      <div class="video-overlay-text">
+        Watch us in action — powering brands with passion.
+      </div>
     </div>
   </header>
 
-  <section class="about" id="about" data-aos="fade-up">
-    <div class="container">
-      <h2>About ByteMatrix</h2>
-      <p style="text-align: center;">Empowering creators and businesses with smart digital solutions that scale.</p>
-    </div>
-  </section>
+  <section data-aos="fade-up">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service" data-aos="zoom-in">
+        <i class="fas fa-code"></i>
+        <img src="media/web-dev.jpg" alt="Web Development" class="service-img">
+        <h3>Web Development</h3>
+        <p>Build responsive, modern websites tailored to your brand.</p>
+      </div>
 
-  <section class="services" id="services" data-aos="fade-up">
-    <div class="container">
-      <h2>Our Services</h2>
-      <div class="service-cards">
-        <div class="card">
-          <i class="fas fa-code"></i>
-          <h3>Web Development</h3>
-          <p>Responsive websites tailored for performance and conversion.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-video"></i>
-          <h3>Video Editing</h3>
-          <p>Engaging edits for YouTube, reels, and promos.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-image"></i>
-          <h3>Thumbnail Design</h3>
-          <p>Scroll-stopping designs that get clicks.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-bullhorn"></i>
-          <h3>Digital Marketing</h3>
-          <p>SEO, ads, and strategy to grow your brand online.</p>
-        </div>
+      <div class="service" data-aos="zoom-in">
+        <i class="fas fa-video"></i>
+        <img src="media/video-editing.jpg" alt="Video Editing" class="service-img">
+        <h3>Video Editing</h3>
+        <p>Create polished video content that tells your story.</p>
+      </div>
+
+      <div class="service" data-aos="zoom-in">
+        <i class="fas fa-bullhorn"></i>
+        <img src="media/marketing.jpg" alt="Marketing" class="service-img">
+        <h3>Marketing</h3>
+        <p>Boost your visibility with smart digital marketing tactics.</p>
       </div>
     </div>
   </section>
 
-  <section class="testimonials" id="testimonials" data-aos="zoom-in">
-    <div class="container">
-      <h2>What Clients Say</h2>
-      <div class="testimonial">
-        <p>“ByteMatrix transformed my idea into a thriving online course!”</p>
-        <span>- Riya Sharma</span>
-      </div>
-      <div class="testimonial">
-        <p>“Their design and development helped us scale fast.”</p>
-        <span>- Aman Verma</span>
+  <section data-aos="fade-up">
+    <h2>What Clients Say</h2>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">“ByteMatrix helped us launch faster and smarter — amazing team!”</div>
+        <div class="swiper-slide">“Reliable, creative, and sharp — highly recommended.”</div>
+        <div class="swiper-slide">“Professional results with a personal touch. Loved working with them.”</div>
       </div>
     </div>
   </section>
 
-  <section class="contact" id="contact" data-aos="fade-up">
-    <div class="container">
-      <h2>Contact Us</h2>
-      <form>
-        <input type="text" placeholder="Name" required />
-        <input type="email" placeholder="Email" required />
-        <textarea placeholder="Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-    </div>
+  <section class="contact" data-aos="fade-up">
+    <h2>Get in Touch</h2>
+    <input type="text" placeholder="Your Name"><br>
+    <input type="email" placeholder="Your Email"><br>
+    <textarea rows="4" placeholder="Your Message"></textarea><br>
+    <button>Send Message</button>
   </section>
 
   <footer>
-    <div class="container">
-      <p>&copy; 2025 ByteMatrix. All rights reserved.</p>
-    </div>
+    &copy; 2025 ByteMatrix. All rights reserved.
   </footer>
 
-  <!-- JS Libraries -->
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

@@ -1,6 +1,18 @@
+// Animate on scroll
 AOS.init({
   duration: 1000,
   once: true
+});
+
+// Testimonial Slider (Swiper.js)
+const swiper = new Swiper(".mySwiper", {
+  loop: true,
+  autoplay: {
+    delay: 4000
+  },
+  pagination: {
+    el: ".swiper-pagination",
+  },
 });
 
 // Scroll-to-section for CTA button
@@ -40,7 +52,6 @@ if (contactForm) {
   const email = contactForm.querySelector('input[placeholder="Email"]');
   const message = contactForm.querySelector('textarea');
   const submitBtn = contactForm.querySelector('button[type="submit"]');
-  // Remove errors and success on input
   [name, email, message].forEach(input => {
     input.addEventListener('input', () => {
       clearError(input);
@@ -56,7 +67,7 @@ if (contactForm) {
       setError(name, 'Please enter your name.');
       valid = false;
     }
-    if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email.value.trim())) {
+    if (!/^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$/.test(email.value.trim())) {
       setError(email, 'Please enter a valid email.');
       valid = false;
     }
@@ -69,14 +80,12 @@ if (contactForm) {
       return;
     }
     e.preventDefault();
-    // Show loading spinner and disable button
     if (submitBtn) {
       submitBtn.disabled = true;
       submitBtn.dataset.original = submitBtn.innerHTML;
       submitBtn.innerHTML = '<span class="spinner"></span> Sending...';
     }
     setTimeout(() => {
-      // Show success message
       let success = contactForm.querySelector('.success-msg');
       if (!success) {
         success = document.createElement('div');
@@ -97,11 +106,11 @@ if (contactForm) {
         if (success) success.classList.remove('pop-success');
         success.textContent = '';
       }, 4000);
-    }, 1200); // Simulate sending delay
+    }, 1200);
   });
 }
 
-// Service card hover effect (adds/removes a class for JS-based effect + highlight)
+// Service card hover effect
 const serviceCards = document.querySelectorAll('.service-cards .card');
 serviceCards.forEach(card => {
   card.addEventListener('mouseenter', () => {
