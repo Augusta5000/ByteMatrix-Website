@@ -1,28 +1,8 @@
-// Animate on scroll
-AOS.init({
-  duration: 1000,
-  once: true
-});
+// Initialize AOS
+AOS.init({ duration: 1000, once: true });
 
-// Scroll-to-top button
-let scrollBtn = document.createElement('button');
-scrollBtn.textContent = '↑';
-scrollBtn.className = 'scroll-to-top';
-scrollBtn.style.position = 'fixed';
-scrollBtn.style.bottom = '32px';
-scrollBtn.style.right = '32px';
-scrollBtn.style.padding = '12px 18px';
-scrollBtn.style.fontSize = '1.5rem';
-scrollBtn.style.borderRadius = '50%';
-scrollBtn.style.background = '#4F46E5';
-scrollBtn.style.color = '#fff';
-scrollBtn.style.border = 'none';
-scrollBtn.style.boxShadow = '0 2px 8px rgba(0,0,0,0.12)';
-scrollBtn.style.cursor = 'pointer';
-scrollBtn.style.display = 'none';
-scrollBtn.style.zIndex = '1000';
-document.body.appendChild(scrollBtn);
-
+// Scroll-to-top
+const scrollBtn = document.querySelector('.scroll-to-top');
 window.addEventListener('scroll', () => {
   scrollBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
 });
@@ -30,7 +10,7 @@ scrollBtn.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
 
-// Contact form inline validation
+// Form validation
 const nameInput = document.querySelector('.contact input[placeholder="Your Name"]');
 const emailInput = document.querySelector('.contact input[placeholder="Your Email"]');
 const messageInput = document.querySelector('.contact textarea');
