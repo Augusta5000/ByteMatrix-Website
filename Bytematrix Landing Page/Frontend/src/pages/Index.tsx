@@ -161,7 +161,7 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             {services.map((service, index) => (
               <div key={index} className="bg-white/70 backdrop-blur-sm rounded-3xl p-10 shadow-xl border border-white/20" data-aos="fade-up" data-aos-delay={index * 100}>
-                <div className={w-20 h-20 rounded-2xl bg-gradient-to-r ${service.color} flex items-center justify-center mb-8}>
+                <div className={`w-20 h-20 rounded-2xl bg-gradient-to-r ${service.color} flex items-center justify-center mb-8`}>
                   <service.icon className="w-10 h-10 text-white" />
                 </div>
                 <div className="w-full h-48 rounded-2xl overflow-hidden mb-8">
